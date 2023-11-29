@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Speed Test VSCode</title>
+</head>
+<body>
+  !Nothing here. Check the console or got to <a href="/index.txt">/index.txt</a>
+  <script>
+    const fetchSome = async () => {
+      const response = await fetch('/index.txt');
+      const result = await response.text();
+      const size = new Blob([result]).size;
+      console.log('Bytes:', size);
+      console.log('KiloBytes:', size / 1024);
+      console.log('MegaBytes:', size / 1024 / 1024);
+    };
+    fetchSome();
+  </script>
+</body>
+</html>
